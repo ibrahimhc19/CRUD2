@@ -53,17 +53,19 @@ include_once "conexion.php";
             </div>
           </form>
           <!--Formulario -->
-
         </div>
-
+        
       </div>
-      <table class="table table-striped ancho mx-auto">
-
-
-
+      <div class="table-responsive col-8 mx-auto">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <table class="table table-striped">
+        
+        
+        
         <?php
-
-
         $con = conexion();
         $sql = "SELECT * FROM agenda_contactos";
         $query = mysqli_query($con, $sql);
@@ -75,7 +77,7 @@ include_once "conexion.php";
             $correo = $row['correo'];
             $telefono = $row['telefono'];
             $id = $row['id'];
-        ?>
+            ?>
 
 
             <thead>
@@ -112,6 +114,7 @@ include_once "conexion.php";
 
             </tbody>
       </table>
+      </div>
     </div>
   </div>
 
