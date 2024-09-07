@@ -1,0 +1,20 @@
+.altura {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ancho{
+  width: 425px !important;
+  max-width: 425px !important;
+}
+
+.login-heading {
+  font-weight: 400;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
