@@ -37,7 +37,24 @@ function mostrar(){
     success: function(data, status){
       $('#cuerpoTabla').html(data);
       console.log(status)
-      // console.log(JSON.stringify(data))
     }
   })
+}
+
+
+function eliminar(eliminarId) {
+  let confirmacion = confirm("¿Estás seguro de que deseas eliminar este elemento?");
+  
+  if (confirmacion) {
+    $.ajax({
+      url: "eliminar.php",
+      type: "post",
+      data: {
+        toDelete: eliminarId
+      },
+      success: function(data, status) {
+        mostrar();
+      }
+    });
+  }
 }

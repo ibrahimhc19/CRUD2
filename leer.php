@@ -19,13 +19,13 @@ if ($query) {
     $telefono = $row['telefono'];
     $id = $row['id'];
     echo '<tr>
-              <td scope="row" class="text-center">'.$id.'</td>
+              <td scope="row" class="text-center">'.$contador.'</td>
               <td scope="row">'.$nombre.'</td>
               <td scope="row">'.$apellido.'</td>
               <td scope="row">'.$correo.'</td>
               <td scope="row">'.$telefono.'</td>
               <td scope="row"><a><button class="btn btn-info" data-id="'.$id.'">Editar</button></a></td>
-              <td scope="row"><a href="eliminar.php?id='.$id.'"><button class="btn btn-danger" onclick="return confirmar()">Eliminar</button></a></td>
+              <td scope="row"><button class="btn btn-danger" onclick="eliminar('.$id.')">Eliminar</button></td>
             </tr>';
     $contador++;
   }
