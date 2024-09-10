@@ -58,56 +58,10 @@ include_once "conexion.php";
             <th scope="col"></th>
           </tr>
 
-          <?php
-          $con = conexion();
-          $sql = "SELECT * FROM agenda_contactos";
-          $query = mysqli_query($con, $sql);
-          if ($query) {
-            $contador = 1;
-            while ($row = mysqli_fetch_assoc($query)) {
-              $nombre = $row['nombre'];
-              $apellido = $row['apellido'];
-              $correo = $row['correo'];
-              $telefono = $row['telefono'];
-              $id = $row['id'];
-          ?>
+          <tbody id="cuerpoTabla">
 
-          <tbody>
-            <tr>
-              <td scope="row" class="text-center">
-                <?php echo $contador; ?>
-              </td>
-              <td scope="row">
-                <?php echo $nombre; ?>
-              </td>
-              <td scope="row">
-                <?php echo $apellido; ?>
-              </td>
-              <td scope="row">
-                <?php echo $correo; ?>
-              </td>
-              <td scope="row">
-                <?php echo $telefono; ?>
-              </td>
-              <td scope="row">
-                <a><button class="btn btn-info" data-id="<?php echo $id; ?>">
-                    Editar
-                  </button></a>
-              </td>
-              <td scope="row">
-                <a href="eliminar.php?id=<?php echo $id; ?>"><button class="btn btn-danger"
-                    onclick="return confirmar()">
-                    Eliminar
-                  </button></a>
-              </td>
-            </tr>
-
-            <?php
-
-              $contador++;
-            }
-          }
-            ?>
+          
+            
           </tbody>
         </table>
       </div>

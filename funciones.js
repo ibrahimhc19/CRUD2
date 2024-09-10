@@ -21,3 +21,23 @@ function agregar(){
 
 
 }
+
+$(document).ready(function() {
+  mostrar()
+})
+
+function mostrar(){
+  let mostrarDatos = "true";
+  $.ajax({
+    url: "leer.php",
+    type: "post",
+    data: {
+      datos: mostrarDatos
+    },
+    success: function(data, status){
+      $('#cuerpoTabla').html(data);
+      console.log(status)
+      // console.log(JSON.stringify(data))
+    }
+  })
+}

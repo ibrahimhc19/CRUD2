@@ -1,0 +1,33 @@
+<?php
+
+include_once "conexion.php";
+
+$conexion = conexion();
+
+$sql = "SELECT * FROM agenda_contactos";
+
+$query = mysqli_query($conexion, $sql);
+
+if ($query) {
+
+  $contador = 1;
+
+  while ($row = mysqli_fetch_assoc($query)) {
+    $nombre = $row['nombre'];
+    $apellido = $row['apellido'];
+    $correo = $row['correo'];
+    $telefono = $row['telefono'];
+    $id = $row['id'];
+    echo '<tr>
+              <td scope="row" class="text-center">'.$id.'</td>
+              <td scope="row">'.$nombre.'</td>
+              <td scope="row">'.$apellido.'</td>
+              <td scope="row">'.$correo.'</td>
+              <td scope="row">'.$telefono.'</td>
+              <td scope="row"><a><button class="btn btn-info" data-id="'.$id.'">Editar</button></a></td>
+              <td scope="row"><a href="eliminar.php?id='.$id.'"><button class="btn btn-danger" onclick="return confirmar()">Eliminar</button></a></td>
+            </tr>';
+    $contador++;
+  }
+}
+?>
