@@ -1,18 +1,12 @@
 <?php
 
-$nombre = $_GET['nombre'];
-$apellido = $_GET['apellido'];
-$correo = $_GET['correo'];
-$telefono = $_GET['telefono'];
-
 include_once "conexion.php";
-
 $conexion = conexion();
 
-$sql="INSERT INTO agenda_contactos(nombre,apellido,correo,telefono) VALUES ('$nombre', '$apellido','$correo', '$telefono')";
-$query = mysqli_query($conexion,$sql);
-if($query){
-    header("refresh:0;url=index.php");
-}
+extract($_POST);
 
-?>
+if (isset($_POST['sendNombre']) && isset($_POST['sendApellido']) && isset($_POST['sendCorreo']) && isset($_POST['sendTelefono'])) {
+
+  $sql = "INSERT INTO agenda_contactos(nombre,apellido,correo,telefono) VALUES ('$sendNombre', '$sendApellido','$sendCorreo', '$sendTelefono')";
+  $query = mysqli_query($conexion, $sql);
+}
