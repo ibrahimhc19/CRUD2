@@ -26,7 +26,7 @@ include_once "conexion.php";
     <div class="row ">
 
       <div class="table-responsive col-10 mx-auto d-flex flex-column mt-5">
-              <h1 class="text-center">CRUD PHP AJAX</h1>
+              <h1 class="text-center mb-5">CRUD PHP AJAX</h1>
           <div>
 
           </div>

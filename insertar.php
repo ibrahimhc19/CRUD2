@@ -10,3 +10,4 @@ if (!empty($_POST['sendNombre']) && !empty($_POST['sendApellido']) && !empty($_P
   $sql = "INSERT INTO agenda_contactos(nombre,apellido,correo,telefono) VALUES ('$sendNombre', '$sendApellido','$sendCorreo', '$sendTelefono')";
   $query = mysqli_query($conexion, $sql);
 }
+

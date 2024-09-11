@@ -15,10 +15,14 @@ function agregar(){
       sendTelefono: addTelefono
     },
     success: function(data, status){
+      mostrar()
       console.log(status)
     }
   })
-
+  $('#nombre').val('');
+  $('#apellido').val('');
+  $('#correo').val('');
+  $('#telefono').val('');
 
 }
 
@@ -53,6 +57,7 @@ function eliminar(eliminarId) {
         toDelete: eliminarId
       },
       success: function(data, status) {
+        console.log(status)
         mostrar();
       }
     });
