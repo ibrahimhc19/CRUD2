@@ -63,3 +63,9 @@ function eliminar(eliminarId) {
     });
   }
 }
+
+
+
+function actualizar(){
+  
+}
