@@ -24,7 +24,7 @@ if ($query) {
               <td scope="row">'.$apellido.'</td>
               <td scope="row">'.$correo.'</td>
               <td scope="row">'.$telefono.'</td>
-              <td scope="row"><a><button class="btn btn-info" data-id="'.$id.'">Editar</button></a></td>
+              <td scope="row"><a><button class="btn btn-info" data-id="'.$id.'" onclick="actualizar()">Editar</button></a></td>
               <td scope="row"><button class="btn btn-danger" onclick="eliminar('.$id.')">Eliminar</button></td>
             </tr>';
     $contador++;
