@@ -70,7 +70,46 @@ include_once "conexion.php";
     </div>
   </div>
 
+<!-- Modal -->
+<div class="modal fade" id="modalActualizar" tabindex="-1" aria-labelledby="modalActualizarLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-center w-100" id="modalActualizarLabel">Actualizar Contacto</h1>
 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--Formulario -->
+        <form action="insertar.php" method="get" class="tarjeta d-flex flex-column  mx-auto">
+          <!-- <h4 class="text-center">Contacto</h4> -->
+          <div class="mb-3 w-75 mx-auto">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre">
+          </div>
+          <div class="mb-3 w-75 mx-auto">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido">
+          </div>
+          <div class="mb-3 w-75 mx-auto">
+            <label for="correo" class="form-label">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="correo" name="correo">
+          </div>
+          <div class="mb-3 w-75 mx-auto">
+            <label for="telefono" class="form-label">Número Telefónico:</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono">
+          </div>
+
+        </form>
+        <!--Formulario -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

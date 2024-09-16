@@ -16,7 +16,6 @@ function agregar(){
     },
     success: function(data, status){
       mostrar()
-      console.log(status)
     }
   })
   $('#nombre').val('');
@@ -40,7 +39,6 @@ function mostrar(){
     },
     success: function(data, status){
       $('#cuerpoTabla').html(data);
-      console.log(status)
     }
   })
 }
@@ -57,7 +55,6 @@ function eliminar(eliminarId) {
         toDelete: eliminarId
       },
       success: function(data, status) {
-        console.log(status)
         mostrar();
       }
     });
@@ -66,6 +63,21 @@ function eliminar(eliminarId) {
 
 
 
-function actualizar(){
+function obtenerDatos(actualizarId){
+
+  $.ajax({
+    url: 'actualizar.php', 
+    type: "post",
+    data: {
+      toUpdate: actualizarId
+    },    
+    success: function(data, status) {
+      $('#modalActualizar .modal-body').html(data);
+  
+      var myModal = new bootstrap.Modal(document.getElementById('modalActualizar'));
+      myModal.show();
+    }
+  });
+  
   
 }
