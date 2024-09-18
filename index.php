@@ -43,7 +43,7 @@ include_once "conexion.php";
                   </tr>
                 </thead>
                   <tr>
-                    <th scope="col"><button class="btn btn-success fw-bold" onclick="agregar()"><svg xmlns="http://www.w3.org/2000/svg" height="16" fill="currentColor" class="bi bi-floppy"
+                    <th scope="col"><button class="btn btn-primary fw-bold" onclick="agregar()"><svg xmlns="http://www.w3.org/2000/svg" height="16" fill="currentColor" class="bi bi-floppy"
                           viewBox="0 0 16 16">
                           <path d="M11 2H9v3h2z" />
                           <path
@@ -84,20 +84,20 @@ include_once "conexion.php";
         <form action="insertar.php" method="get" class="tarjeta d-flex flex-column  mx-auto">
           <!-- <h4 class="text-center">Contacto</h4> -->
           <div class="mb-3 w-75 mx-auto">
-            <label for="nombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="nombre" name="nombre">
+            <label for="editarNombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="editarNombre" name="nombre">
           </div>
           <div class="mb-3 w-75 mx-auto">
-            <label for="apellido" class="form-label">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" name="apellido">
+            <label for="editarApellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="editarApellido" name="apellido">
           </div>
           <div class="mb-3 w-75 mx-auto">
-            <label for="correo" class="form-label">Correo Electrónico:</label>
-            <input type="email" class="form-control" id="correo" name="correo">
+            <label for="editarCorreo" class="form-label">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="editarCorreo" name="correo">
           </div>
           <div class="mb-3 w-75 mx-auto">
-            <label for="telefono" class="form-label">Número Telefónico:</label>
-            <input type="tel" class="form-control" id="telefono" name="telefono">
+            <label for="editarTelefono" class="form-label">Número Telefónico:</label>
+            <input type="tel" class="form-control" id="editarTelefono" name="telefono">
           </div>
 
         </form>
