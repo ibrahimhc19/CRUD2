@@ -79,10 +79,9 @@ include_once "conexion.php";
 
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="cuerpoModal">
         <!--Formulario -->
-        <form action="insertar.php" method="get" class="tarjeta d-flex flex-column  mx-auto">
-          <!-- <h4 class="text-center">Contacto</h4> -->
+        <!-- <form action="insertar.php" method="get" class="tarjeta d-flex flex-column  mx-auto">
           <div class="mb-3 w-75 mx-auto">
             <label for="editarNombre" class="form-label">Nombre:</label>
             <input type="text" class="form-control" id="editarNombre" name="nombre">
@@ -100,7 +99,7 @@ include_once "conexion.php";
             <input type="tel" class="form-control" id="editarTelefono" name="telefono">
           </div>
 
-        </form>
+        </form> -->
         <!--Formulario -->
       </div>
       <div class="modal-footer">

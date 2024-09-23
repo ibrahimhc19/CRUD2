@@ -66,16 +66,17 @@ function eliminar(eliminarId) {
 function obtenerDatos(actualizarId){
 
   $.ajax({
-    url: 'actualizar.php', 
+    url: 'obtener.php', 
     type: "post",
     data: {
-      toUpdate: actualizarId
+      toGet: actualizarId
     },    
     success: function(data, status) {
-      $('#modalActualizar .modal-body').html(data);
-  
+      
       var myModal = new bootstrap.Modal(document.getElementById('modalActualizar'));
+      $('#cuerpoModal').html(data);
       myModal.show();
+      
     }
   });
   
