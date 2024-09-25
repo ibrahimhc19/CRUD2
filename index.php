@@ -16,7 +16,6 @@ include_once "conexion.php";
   <link rel="stylesheet" href="./styles.css">
 </head>
 
-<script src="./confirmar.js"></script>
 
 <body class="bg-light">
 
@@ -79,32 +78,14 @@ include_once "conexion.php";
 
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body" id="cuerpoModal">
+      <div class="modal-body">
         <!--Formulario -->
-        <!-- <form action="insertar.php" method="get" class="tarjeta d-flex flex-column  mx-auto">
-          <div class="mb-3 w-75 mx-auto">
-            <label for="editarNombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="editarNombre" name="nombre">
-          </div>
-          <div class="mb-3 w-75 mx-auto">
-            <label for="editarApellido" class="form-label">Apellido:</label>
-            <input type="text" class="form-control" id="editarApellido" name="apellido">
-          </div>
-          <div class="mb-3 w-75 mx-auto">
-            <label for="editarCorreo" class="form-label">Correo Electrónico:</label>
-            <input type="email" class="form-control" id="editarCorreo" name="correo">
-          </div>
-          <div class="mb-3 w-75 mx-auto">
-            <label for="editarTelefono" class="form-label">Número Telefónico:</label>
-            <input type="tel" class="form-control" id="editarTelefono" name="telefono">
-          </div>
 
-        </form> -->
         <!--Formulario -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Guardar cambios</button>
+        <button type="button" id="guardarCambios" class="btn btn-primary">Guardar cambios</button>
       </div>
     </div>
   </div>

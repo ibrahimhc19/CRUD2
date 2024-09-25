@@ -5,8 +5,8 @@ $conexion = conexion();
 
 extract($_POST);
 
-if (!empty($_POST['sendNombre']) && !empty($_POST['sendApellido']) && !empty($_POST['sendCorreo']) && !empty($_POST['sendTelefono'])) {
+if (!empty($_POST['newNombre']) && !empty($_POST['newApellido']) && !empty($_POST['newCorreo']) && !empty($_POST['newTelefono'])) {
 
-  $sql = "UPDATE agenda_contactos SET nombre=$sendNombre, apellido=$sendApellido, correo=$sendCorreo, telefono=$sendTelefono) WHERE id=$id";
+  $sql = "UPDATE agenda_contactos SET nombre='$newNombre', apellido='$newApellido', correo='$newCorreo', telefono='$newTelefono' WHERE id=$editId";
   $query = mysqli_query($conexion, $sql);
-}
+} 

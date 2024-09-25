@@ -24,7 +24,7 @@ if ($query) {
               <td scope="row">'.$apellido.'</td>
               <td scope="row">'.$correo.'</td>
               <td scope="row">'.$telefono.'</td>
-              <td scope="row"><button type="button" class="btn btn-info" data-id="'.$id.'" data-bs-toggle="modal" data-bs-target="#modalActualizar" onclick="obtenerDatos('.$id.')">Actualizar</button></td>
+              <td scope="row"><button type="button" class="btn btn-info" data-id="'.$id.'" onclick="obtenerDatos('.$id.')">Actualizar</button></td>
               <td scope="row"><button class="btn btn-danger" onclick="eliminar('.$id.')">Eliminar</button></td>
             </tr>';
     $contador++;
